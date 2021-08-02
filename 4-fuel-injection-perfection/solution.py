@@ -1,10 +1,15 @@
 def solution(n):
-    count = 0
-    while n:
-        print(n)
-        count += 1
-        n = n >> 1
-    print(1 << count - 1)
-    print(1 << count)
+    n = int(n)
+    steps = 0
+    while 3 < n:
+        steps += 1
+        if n & 1:
+            n += (n & 2) - 1
+        else:
+            n >>= 1
+    return steps + n - 1
 
-solution(11)
+
+print(solution('3'))
+print(solution('4'))
+print(solution('15'))
