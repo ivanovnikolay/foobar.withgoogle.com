@@ -1,5 +1,5 @@
 def solution(n):
-    n = int(n)
+    n = long(n)
     steps = 0
     while 3 < n:
         steps += 1
