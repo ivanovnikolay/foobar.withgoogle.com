@@ -6,8 +6,7 @@ def solution(n, b):
         ids[id] = i
 
 
-def generate_ids(init, b):
-    mid = init
+def generate_ids(mid, b):
     while True:
         yield mid
         mid = minion_id(mid, b)
@@ -24,5 +23,5 @@ def itoa(n, b):
     return n < b and str(n) or itoa(n // b, b) + str(n % b)
 
 
-print(solution('1211', 10))
-print(solution('210022', 3))
+assert solution('1211', 10) == 1
+assert solution('210022', 3) == 3

@@ -10,6 +10,6 @@ def solution(n):
     return steps + n - 1
 
 
-print(solution('3'))
-print(solution('4'))
-print(solution('15'))
+assert solution('3') == 2
+assert solution('4') == 2
+assert solution('15') == 5

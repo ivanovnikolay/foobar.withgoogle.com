@@ -9,5 +9,5 @@ def solution(area):
     return []
 
 
-print(solution(12))
-print(solution(15324))
+assert solution(12) == [9, 1, 1, 1]
+assert solution(15324) == [15129, 169, 25, 1]

@@ -17,5 +17,5 @@ def solution(total_lambs):
     return stingy() - generous()
 
 
-print(solution(10))
-print(solution(143))
+assert solution(10) == 1
+assert solution(143) == 3
