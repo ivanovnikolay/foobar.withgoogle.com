@@ -33,11 +33,8 @@ You can expect total_lambs to always be a positive integer less than 1 billion (
 Test cases
 ==========
 
-Input: solution.solution(143)
-
+Input: solution.solution(143)  
 Output: 3
 
-
-Input: solution.solution(10)
-
+Input: solution.solution(10)  
 Output: 1

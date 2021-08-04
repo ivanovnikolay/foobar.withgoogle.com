@@ -30,11 +30,8 @@ If the algorithm reaches a constant, such as 0, then the length is 1.
 Test cases
 ==========
 
-Input: solution.solution('1211', 10)
-
+Input: solution.solution('1211', 10)  
 Output: 1
 
-
-Input: solution.solution('210022', 3)
-
+Input: solution.solution('210022', 3)  
 Output: 3

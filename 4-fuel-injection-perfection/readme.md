@@ -33,10 +33,8 @@ solution(15) returns 5: 15 -> 16 -> 8 -> 4 -> 2 -> 1
 Test cases
 ==========
 
-Input: solution.solution('15')
-
+Input: solution.solution('15')  
 Output: 5
 
-
-Input: solution.solution('4')
+Input: solution.solution('4')  
 Output: 2

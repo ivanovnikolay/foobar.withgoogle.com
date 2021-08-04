@@ -18,11 +18,8 @@ You need to know how many replication cycles (generations) it will take to gener
 Test cases
 ==========
 
-Input: solution.solution('4', '7')
-
+Input: solution.solution('4', '7')  
 Output: 4
 
-
-Input: solution.solution('2', '1')
-
+Input: solution.solution('2', '1')  
 Output: 1

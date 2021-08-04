@@ -15,11 +15,8 @@ So, following the example above, solution(12) would return [9, 1, 1, 1].
 Test cases
 ==========
 
-Input: solution.solution(15324)
-
+Input: solution.solution(15324)  
 Output: 15129,169,25,1
 
-
-Input: solution.solution(12)
-
+Input: solution.solution(12)  
 Output: 9,1,1,1
