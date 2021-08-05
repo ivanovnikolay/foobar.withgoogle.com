@@ -1,4 +1,4 @@
-from fractions import Fraction
+from fractions import Fraction, gcd
 
 
 def solution(m):
@@ -8,8 +8,12 @@ def solution(m):
     R = Matrix([[Fraction(e, sums[i]) for j, e in enumerate(r) if not sums[j]] for i, r in enumerate(m) if sums[i]])
     L = ~(Matrix.E(len(Q)) - Q) * R
     s0 = L[0]
-    denominator = max(f.denominator for f in s0)
-    return [(f*denominator).numerator for f in s0] + [denominator]
+    d = lcm(*[f.denominator for f in s0 if f.numerator])
+    return [(f*d).numerator for f in s0] + [d]
+
+
+def lcm(*numbers):
+     return reduce(lambda a, b: a * b // gcd(a, b), numbers)
 
 
 class Matrix(list):
