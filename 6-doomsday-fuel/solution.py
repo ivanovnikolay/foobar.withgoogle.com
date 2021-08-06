@@ -4,8 +4,8 @@ from fractions import Fraction, gcd
 def solution(m):
     ''' Markov chain absorb '''
     S = [sum(r) for r in m]
-    Q = Matrix([Fraction(e, S[i]) for j, e in enumerate(r) if S[j] == 0] for i, r in enumerate(m) if S[i])
-    R = Matrix([Fraction(e, S[i]) for j, e in enumerate(r) if S[j] != 0] for i, r in enumerate(m) if S[i])
+    Q = Matrix([Fraction(e, S[i]) for j, e in enumerate(r) if S[j] != 0] for i, r in enumerate(m) if S[i])
+    R = Matrix([Fraction(e, S[i]) for j, e in enumerate(r) if S[j] == 0] for i, r in enumerate(m) if S[i])
     if Q and R:
         I = Matrix.I(n=len(Q))
         F = ~(I - Q)
