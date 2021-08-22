@@ -19,19 +19,15 @@ def ford_fulkerson_max_flow(G, s, t):
         if not parents:
             break
 
-        path = []
-        v = t
-        while v != s:
-            u = parents[v]
-            path.append((u, v))
-            v = u
+        path_gen = lambda p, s, v: [] if s == v else [(v, p[v])] + path_gen(p, s, p[v])
+        path = path_gen(parents, s, t)
 
-        flow = reduce(min, (G[u][v] for u, v in path), Inf)
+        flow = reduce(min, (G[v][u] for u, v in path), Inf)
         max_flow += flow
 
         for u, v in path:
-            G[u][v] -= flow
-            G[v][u] += flow
+            G[u][v] += flow
+            G[v][u] -= flow
     return max_flow
 
 
